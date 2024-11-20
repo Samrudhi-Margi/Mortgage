@@ -1,0 +1,44 @@
+@media screen and (max-width: 1920px) {
+ 
+}
+
+/* Desktop Large - 1440px */
+@media screen and (max-width: 1440px) {
+  
+}
+
+@media screen and (max-width: 1280px) {
+  
+}
+
+@media screen and (max-width: 1024px) {
+  
+}
+
+@media screen and (max-width: 768px) {
+  .top-header-area .info-link {
+    line-height: 1;
+    padding-bottom: 10px;
+}
+  
+}
+
+@media screen and (max-width: 767px) {
+  
+}
+
+@media screen and (max-width: 480px) {
+  .top-header-area ul li{
+    padding: 6px 0;
+  }
+  .top-header-area .info-link li,
+  .top-header-area .import-link li{
+    border-right: 0px solid #e5e5e5;
+}
+.team .team-member-item img {
+  max-width: 100%;
+}
+.service .service-single-item .service-content{
+  height: auto;
+}
+}
