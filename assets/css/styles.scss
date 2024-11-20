@@ -27,7 +27,7 @@ a {
 }
 
 .common-space {
-  padding: 80px 0;
+  padding: 60px 0;
 
   @media (max-width: $mediumScreen) {
     padding: 30px 0;
@@ -38,7 +38,7 @@ a {
   }
 }
 
-.bg-black{
+.bg-black {
   background-color: $colorBlack;
 }
 
@@ -64,6 +64,7 @@ a {
   cursor: pointer;
   transition: background-color 0.3s ease;
   border-radius: 10px;
+  text-decoration: none;
 }
 
 .btn-primary {
@@ -79,7 +80,6 @@ a {
   }
 }
 
-
 .btn-primary-outline {
   background-color: $colorBlack;
   color: $colorBlue;
@@ -91,7 +91,6 @@ a {
     transition: background-color 0.3s ease;
   }
 }
-
 
 // common heading
 h2 {
@@ -116,6 +115,7 @@ h2:before {
   left: 50%;
   margin-left: -14px;
   background-color: $colorGold;
+  z-index: 1;
 }
 h2:after {
   width: 100px;
@@ -211,9 +211,9 @@ h2:after {
     font-weight: 500;
   }
   .others-options {
-   a{
-    text-decoration: none;
-   }
+    a {
+      text-decoration: none;
+    }
   }
 }
 
@@ -239,24 +239,23 @@ header.fixed-top {
 .banner-section {
   .col-12 {
     position: relative;
-  
-  &::after {
-    content: "";
-    position: absolute;
-    top: 0px;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    z-index: 9;
-    background: linear-gradient(
-      to top,
-      rgba(0, 0, 0, 0.65) 0%,
-      rgba(0, 0, 0, 0) 22%
-    );
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0px;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      z-index: 9;
+      background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.65) 0%,
+        rgba(0, 0, 0, 0) 22%
+      );
+    }
   }
 }
-}
-
 
 // .slider{
 // .slider-banner {
@@ -294,24 +293,35 @@ header.fixed-top {
   font-size: 10px;
 }
 
-
+.slider.slider-client .slick-dots {
+  bottom: -100px;
+}
 // about
 .about {
-  background-color: $colorGoldLighter;
+  background-color: $colorBlueLighter;
   position: relative;
 }
 .section-overlay-about {
+  // background: linear-gradient(
+  //   180deg,
+  //   rgba(255, 255, 255, 0) 0px,
+  //   rgba(255, 255, 255, 0.12) 5%,
+  //   rgba(251, 244, 235, 0.1) 10%,
+  //   rgba(251, 244, 235, 0) 50%,
+  //   rgba(251, 244, 235, 0.5) 70%,
+  //   rgba(251, 244, 235, 1) 90%,
+  //   rgba(251, 244, 235, 0.5) 95%,
+  //   rgba(251, 244, 235, 0)
+  // );
+  // background: linear-gradient(#e5e5e5, #fff);
   background: linear-gradient(
     180deg,
-    rgba(255, 255, 255, 0) 0px, 
-    rgba(255, 255, 255, 0.12) 5%, 
-    rgba(251, 244, 235, 0.1) 10%, 
-    rgba(251, 244, 235, 0) 50%, 
-    rgba(251, 244, 235, 0.5) 70%, 
-    rgba(251, 244, 235, 1) 90%, 
-    rgba(251, 244, 235, 0.5) 95%, 
-    rgba(251, 244, 235, 0));
-  height: 100%;
+    rgba(229, 229, 229, 0) 0%,
+    rgba(229, 229, 229, 0) 50%,
+    rgba(229, 229, 229, 0) 80%,
+    rgb(255, 255, 255, 1)
+  );
+  height: 410px;
   margin: 0;
   overflow: hidden;
   padding: 0;
@@ -323,8 +333,9 @@ header.fixed-top {
 }
 // team
 .team {
-  // background-color: $colorBlueLighter;
+  background-color: white;
   margin-top: 30px;
+
   .team-member-item {
     padding: 20px;
     border-radius: 12px;
@@ -339,7 +350,7 @@ header.fixed-top {
       right: 0;
       width: 0;
       height: 100%;
-      background-color: $colorGoldLighter;
+      background-color: $colorBlueLighter;
       border-radius: 12px;
       z-index: -1;
       transition: all ease 0.5s;
@@ -360,7 +371,7 @@ header.fixed-top {
       border-radius: 12px;
     }
     .title {
-      color: $colorGold;
+      color: $colorBlue;
       font-size: 14px;
       font-weight: 500;
       display: block;
@@ -393,10 +404,10 @@ header.fixed-top {
       color: $colorBlack;
     }
     ul li a:hover {
-      color: $colorGold;
+      color: $colorBlue;
     }
     &:hover h3 a {
-      color: $colorGold;
+      color: $colorBlue;
       cursor: pointer;
     }
     &:hover:before {
@@ -410,18 +421,16 @@ header.fixed-top {
 // service
 .service {
   background-color: $colorBlueLighter;
+  position: relative;
   .section-overlay-service {
     background: linear-gradient(
       180deg,
-      rgba(255, 255, 255, 0) 0px, 
-      rgba(255, 255, 255, 0.12) 5%, 
-      rgba(229, 245, 249, 0.1) 10%, 
-      rgba(229, 245, 249, 0) 50%, 
-      rgba(229, 245, 249, 0.5) 70%, 
-      rgba(229, 245, 249, 1) 90%, 
-      rgba(229, 245, 249, 0.5) 95%, 
-      rgba(229, 245, 249, 0));
-    height: 100%;
+      rgb(255 255 255 / 96%) 0%,
+      rgb(229 229 229 / 0%) 14%,
+      rgba(229, 229, 229, 0) 80%,
+      rgb(255, 255, 255, 0)
+    );
+    height: 410px;
     margin: 0;
     overflow: hidden;
     padding: 0;
@@ -429,7 +438,25 @@ header.fixed-top {
     position: absolute;
     width: 100%;
     z-index: 1;
-    // display: none;
+    top: 0;
+  }
+  .section-overlay-service-bottom {
+    background: linear-gradient(
+      180deg,
+      rgb(255 255 255 / 96%) 0%,
+      rgb(229 229 229 / 0%) 0%,
+      rgba(229, 229, 229, 0) 80%,
+      rgb(255, 255, 255)
+    );
+    height: 410px;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    bottom: 0;
   }
 
   .service-single-item {
@@ -450,10 +477,10 @@ header.fixed-top {
     }
     .service-content {
       padding: 25px;
-      border: 1px solid $colorBlueLighter;
+      border: 1px solid $colorBlackLighter;
       border-radius: 0 0 12px 12px;
       transition: all ease 0.5s;
-      height: 380px;
+      height: 420px;
     }
 
     h3 {
@@ -479,24 +506,57 @@ header.fixed-top {
     .list-style li:last-child {
       margin-bottom: 0;
     }
-    .list-style li::before {
-      content: "";
-      position: absolute;
-      top: 50%;
-      left: 0;
-      background-color: $colorBlueLighter;
-      width: 5px;
-      height: 5px;
-      border-radius: 50px;
-      transform: translateY(-50%);
-    }
     .list-style li {
-      font-weight: 500;
-      color: $colorBlack;
+      font-weight: normal;
+      margin-left: 10px;
+      list-style: disc;
+      padding-left: 0;
     }
     .list-style li::before {
       background-color: $colorBlue;
     }
+  }
+}
+
+// lender
+.lenders {
+  background-color: $colorBlueLighter;
+  position: relative;
+  .section-overlay-lenders {
+    background: linear-gradient(
+      180deg,
+      rgb(255 255 255 / 96%) 0%,
+      rgb(229 229 229 / 0%) 14%,
+      rgba(229, 229, 229, 0) 80%,
+      rgb(255, 255, 255)
+    );
+    height: 360px;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    top: 0;
+  }
+  .section-overlay-lenders-bottom {
+    background: linear-gradient(
+      180deg,
+      rgb(255 255 255 / 96%) 0%,
+      rgb(229 229 229 / 0%) 14%,
+      rgba(229, 229, 229, 0) 80%,
+      rgb(255, 255, 255)
+    );
+    height: 410px;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    bottom: 0;
   }
 }
 
@@ -611,31 +671,46 @@ button.slick-next.slick-arrow {
   opacity: 0.2;
 }
 
-
-
 .footer {
-  background: $colorBlueLighter;
+  background-color: $colorBlueLighter;
+  position: relative;
+  padding: 40px 0;
+  .section-overlay-footer {
+    background: linear-gradient(
+      180deg,
+      rgb(255 255 255 / 96%) 0%,
+      rgb(229 229 229 / 0%) 14%,
+      rgba(229, 229, 229, 0) 80%,
+      rgb(255, 255, 255)
+    );
+    height: 235px;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    top: 0;
+  }
 
-  .footer-single-item{
+  .footer-single-item {
     .small {
       margin-bottom: 10px;
     }
-    img{
+    img {
       width: 150px;
       margin-bottom: 10px;
     }
     .footer-link {
       margin-bottom: 10px;
-      a{
+      a {
         color: $colorBlack;
-        
       }
-     
     }
-    p{
+    p {
       padding: 0;
       margin: 0;
     }
   }
 }
-

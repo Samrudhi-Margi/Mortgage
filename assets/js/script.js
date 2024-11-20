@@ -39,7 +39,7 @@ $(".slider-client").slick({
 });
 $(".slider-banner").slick({
   dots: true,
-  arrows: true,
+  arrows: false,
   infinite: true,
   speed: 3000,
   slidesToShow: 1,
@@ -54,7 +54,7 @@ $(".slider-banner").slick({
         slidesToScroll: 1,
         infinite: true,
         dots: true,
-        arrows: true,
+        arrows: false,
       },
     },
     {

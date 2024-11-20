@@ -1,44 +1,86 @@
 @media screen and (max-width: 1920px) {
- 
 }
 
 /* Desktop Large - 1440px */
 @media screen and (max-width: 1440px) {
-  
 }
 
 @media screen and (max-width: 1280px) {
-  
 }
 
 @media screen and (max-width: 1024px) {
-  
 }
 
 @media screen and (max-width: 768px) {
   .top-header-area .info-link {
-    line-height: 1;
-    padding-bottom: 10px;
-}
-  
+    display: none;
+  }
+  .section-overlay-about {
+    height: 560px;
+  }
+  .lenders .section-overlay-lenders {
+    height: 340px;
+  }
+  .footer .section-overlay-footer {
+    height: 235px;
+  }
+  .common-space {
+    padding: 60px 0;
+  }
 }
 
 @media screen and (max-width: 767px) {
-  
 }
 
 @media screen and (max-width: 480px) {
-  .top-header-area ul li{
+  .top-header-area ul li {
     padding: 6px 0;
   }
   .top-header-area .info-link li,
-  .top-header-area .import-link li{
+  .top-header-area .import-link li {
     border-right: 0px solid #e5e5e5;
-}
-.team .team-member-item img {
-  max-width: 100%;
-}
-.service .service-single-item .service-content{
-  height: auto;
-}
+  }
+  .team .team-member-item img {
+    max-width: 100%;
+  }
+  .service .service-single-item .service-content {
+    height: auto;
+  }
+  .top-header-area .import-link li {
+    margin-right: 10px;
+    padding-right: 0px;
+  }
+  .service .service-single-item .list-style li {
+    margin-left: 10px;
+  }
+  .contact .info-single-item ul li span,
+  .contact .info-single-item ul li a {
+    margin-left: 0;
+  }
+  .contact .info-single-item {
+    padding: 0px 20px 20px 20px;
+  }
+  .navbar-nav,
+  .dropdown {
+    text-align: center;
+  }
+  .heading {
+    padding: 0 0 20px 0;
+  }
+  .section-overlay-about {
+    background: linear-gradient(
+      180deg,
+      rgba(229, 229, 229, 0) 0%,
+      rgba(229, 229, 229, 0) 92%,
+      rgba(229, 229, 229, 0) 80%,
+      rgb(255, 255, 255)
+    );
+    height: 780px;
+  }
+  .lenders .section-overlay-lenders {
+    height: 304px;
+  }
+  .footer .section-overlay-footer {
+    height: 285px;
+  }
 }

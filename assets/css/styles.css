@@ -22,7 +22,7 @@ a {
 }
 
 .common-space {
-  padding: 80px 0;
+  padding: 60px 0;
 }
 @media (max-width: 768px) {
   .common-space {
@@ -65,6 +65,7 @@ a {
   cursor: pointer;
   transition: background-color 0.3s ease;
   border-radius: 10px;
+  text-decoration: none;
 }
 
 .btn-primary {
@@ -112,6 +113,7 @@ h2:before {
   left: 50%;
   margin-left: -14px;
   background-color: #d8953c;
+  z-index: 1;
 }
 
 h2:after {
@@ -249,14 +251,18 @@ header.fixed-top {
   font-size: 10px;
 }
 
+.slider.slider-client .slick-dots {
+  bottom: -100px;
+}
+
 .about {
-  background-color: #fbf4eb;
+  background-color: #e5f5f9;
   position: relative;
 }
 
 .section-overlay-about {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0px, rgba(255, 255, 255, 0.12) 5%, rgba(251, 244, 235, 0.1) 10%, rgba(251, 244, 235, 0) 50%, rgba(251, 244, 235, 0.5) 70%, rgb(251, 244, 235) 90%, rgba(251, 244, 235, 0.5) 95%, rgba(251, 244, 235, 0));
-  height: 100%;
+  background: linear-gradient(180deg, rgba(229, 229, 229, 0) 0%, rgba(229, 229, 229, 0) 50%, rgba(229, 229, 229, 0) 80%, rgb(255, 255, 255));
+  height: 410px;
   margin: 0;
   overflow: hidden;
   padding: 0;
@@ -267,6 +273,7 @@ header.fixed-top {
 }
 
 .team {
+  background-color: white;
   margin-top: 30px;
 }
 .team .team-member-item {
@@ -283,7 +290,7 @@ header.fixed-top {
   right: 0;
   width: 0;
   height: 100%;
-  background-color: #fbf4eb;
+  background-color: #e5f5f9;
   border-radius: 12px;
   z-index: -1;
   transition: all ease 0.5s;
@@ -304,7 +311,7 @@ header.fixed-top {
   border-radius: 12px;
 }
 .team .team-member-item .title {
-  color: #d8953c;
+  color: #009fc8;
   font-size: 14px;
   font-weight: 500;
   display: block;
@@ -337,10 +344,10 @@ header.fixed-top {
   color: #000000;
 }
 .team .team-member-item ul li a:hover {
-  color: #d8953c;
+  color: #009fc8;
 }
 .team .team-member-item:hover h3 a {
-  color: #d8953c;
+  color: #009fc8;
   cursor: pointer;
 }
 .team .team-member-item:hover:before {
@@ -352,10 +359,11 @@ header.fixed-top {
 
 .service {
   background-color: #e5f5f9;
+  position: relative;
 }
 .service .section-overlay-service {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0px, rgba(255, 255, 255, 0.12) 5%, rgba(229, 245, 249, 0.1) 10%, rgba(229, 245, 249, 0) 50%, rgba(229, 245, 249, 0.5) 70%, rgb(229, 245, 249) 90%, rgba(229, 245, 249, 0.5) 95%, rgba(229, 245, 249, 0));
-  height: 100%;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.96) 0%, rgba(229, 229, 229, 0) 14%, rgba(229, 229, 229, 0) 80%, rgba(255, 255, 255, 0));
+  height: 410px;
   margin: 0;
   overflow: hidden;
   padding: 0;
@@ -363,6 +371,19 @@ header.fixed-top {
   position: absolute;
   width: 100%;
   z-index: 1;
+  top: 0;
+}
+.service .section-overlay-service-bottom {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.96) 0%, rgba(229, 229, 229, 0) 0%, rgba(229, 229, 229, 0) 80%, rgb(255, 255, 255));
+  height: 410px;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  bottom: 0;
 }
 .service .service-single-item {
   position: relative;
@@ -382,10 +403,10 @@ header.fixed-top {
 }
 .service .service-single-item .service-content {
   padding: 25px;
-  border: 1px solid #e5f5f9;
+  border: 1px solid #e5e5e5;
   border-radius: 0 0 12px 12px;
   transition: all ease 0.5s;
-  height: 380px;
+  height: 420px;
 }
 .service .service-single-item h3 {
   font-size: 22px;
@@ -408,23 +429,43 @@ header.fixed-top {
 .service .service-single-item .list-style li:last-child {
   margin-bottom: 0;
 }
-.service .service-single-item .list-style li::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 0;
-  background-color: #e5f5f9;
-  width: 5px;
-  height: 5px;
-  border-radius: 50px;
-  transform: translateY(-50%);
-}
 .service .service-single-item .list-style li {
-  font-weight: 500;
-  color: #000000;
+  font-weight: normal;
+  margin-left: 10px;
+  list-style: disc;
+  padding-left: 0;
 }
 .service .service-single-item .list-style li::before {
   background-color: #009fc8;
+}
+
+.lenders {
+  background-color: #e5f5f9;
+  position: relative;
+}
+.lenders .section-overlay-lenders {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.96) 0%, rgba(229, 229, 229, 0) 14%, rgba(229, 229, 229, 0) 80%, rgb(255, 255, 255));
+  height: 360px;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  top: 0;
+}
+.lenders .section-overlay-lenders-bottom {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.96) 0%, rgba(229, 229, 229, 0) 14%, rgba(229, 229, 229, 0) 80%, rgb(255, 255, 255));
+  height: 410px;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  bottom: 0;
 }
 
 .contact .info-single-item {
@@ -522,7 +563,21 @@ button.slick-next.slick-arrow {
 }
 
 .footer {
-  background: #e5f5f9;
+  background-color: #e5f5f9;
+  position: relative;
+  padding: 40px 0;
+}
+.footer .section-overlay-footer {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.96) 0%, rgba(229, 229, 229, 0) 14%, rgba(229, 229, 229, 0) 80%, rgb(255, 255, 255));
+  height: 235px;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  top: 0;
 }
 .footer .footer-single-item .small {
   margin-bottom: 10px;
